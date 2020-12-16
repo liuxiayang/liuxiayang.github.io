@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="liuxiayang blog">
+    <meta name="keyword"  content="">
+    <meta name="baidu-site-verification" content="rRxKjxYx37" />
+    <!--<link rel="shortcut icon" href="/img/ironman-draw.png">-->
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <title>
+        
+          有趣的Web-3D - 刘夏阳 | Blog
+        
+    </title>
+
+    <link rel="canonical" href="http://yoursite.com/liuxiayang.github.io/in-article/有趣的Web-3D/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS --> 
+    <link rel="stylesheet" href="/css/beantech.min.css">
+
+    <link rel="stylesheet" href="/css/donate.css">
+    
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css">
+
+    <link rel="stylesheet" href="/css/widget.css">
+
+    <link rel="stylesheet" href="/css/rocket.css">
+
+    <link rel="stylesheet" href="/css/signature.css">
+
+    <link rel="stylesheet" href="/css/toc.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Hux Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+	<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        
+            background-image: url('https://github.com/liuxiayang/pic/blob/master/wallpaper/beach.jpg?raw=true')
+            /*post*/
+        
+    }
+    /*<!---->*/
+</style>
+
+<header class="intro-header" >
+    <!-- Signature -->
+    <div id="signature">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                
+                    <div class="post-heading">
+                        <div class="tags">
+                            
+                              <a class="tag" href="/tags/#Skill" title="Skill">Skill</a>
+                            
+                              <a class="tag" href="/tags/#Notes" title="Notes">Notes</a>
+                            
+                        </div>
+                        <h1>有趣的Web-3D</h1>
+                        <h2 class="subheading"></h2>
+                        <span class="meta">
+                            Posted by 刘夏阳 on
+                            2019-10-28
+                        </span>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+	
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">劉夏陽</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                    
+
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/archive/">Archives</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">Me</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/others/">Others</a>
+                        </li>
+                        
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- Main Content -->
+    <!-- Modify by Yu-Hsuan Yen -->
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+            <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <h3 id="背景介绍">背景介绍</h3>
+<h4 id="opengl与webgl">OpenGL与WebGL</h4>
+<p>    [OpenGL]是关于2维3维计算机图形技术，Khronos Group对各种技术进行了标准化并制定了[OpenGL]，作为Windows、Mac、Linux上的一种跨平台技术并一直活跃着。Khronos Group把这样的OpenGL技术运用到WEB浏览器并制定了WebGL。WebGL 是 OpenGL 和 JavaScript 之间的结晶，HTML5 的 canvas 元素里，利用和OpenGL同样的API，可以绘制高精度的三维图像。</p>
+<p>WebGL是在浏览器中实现三维效果的一套规范。</p>
+<h4 id="threejs">THREE.JS</h4>
+<p>    虽说通过WebGL的绘制效果甚至可能达到本地的高性能游戏专用机的绘制效果，但WebGL直接对gpu进行操作，如果没有非常精通OpenGL的人在还是不太现实的。因此，为了能够更加简单的利用WebGL，库「Three.js」被发表了。因为 Three.js 非常好用，所以很快变得非常有人气。WebGL的javascript框架除了Three.js之外，还有「J3D」和「SceneJS」和日本开发的「gl.enchant.js」等。</p>
+<p>THREE.JS是简化WebGL操作的一个第三方库</p>
+<h3 id="构成组件">构成组件</h3>
+<p>场景、相机、对象、渲染器、控制器…</p>
+<h4 id="场景">场景</h4>
+<p><font color="#049EF4">Scene( )</font><br>
+定义一个绘制的区域<br>
+<font color="#049EF4">add(object)</font><br>
+添加对象到场景中</p>
+<h4 id="相机camera">相机（Camera）</h4>
+<p><font color="#049EF4">Camera( )</font><br>
+创建一个新的视角。</p>
+<p><img src="%E6%8A%95%E5%BD%B1.jpeg" alt=""></p>
+<p><font color="#049EF4">OrthographicCamera ( left : Num, right : Num, top : Num, bottom : Num, near : Num, far : Num )</font><br>
+left — 摄像机视锥体左侧面。<br>
+right — 摄像机视锥体右侧面。<br>
+top — 摄像机视锥体上侧面。<br>
+bottom — 摄像机视锥体下侧面。<br>
+near — 摄像机视锥体近端面。<br>
+far — 摄像机视锥体远端面。<br>
+（正交摄像机）</p>
+<p><img src="OrthographicCamera1.jpg" alt=""></p>
+<p><font color="#049EF4">PerspectiveCamera ( fov : Num, aspect : Num, near : Num, far : Num )</font><br>
+fov — 摄像机视锥体垂直视野角度<br>
+aspect — 摄像机视锥体长宽比<br>
+near — 摄像机视锥体近端面<br>
+far — 摄像机视锥体远端面<br>
+（透视摄像机）</p>
+<p><img src="PerspectiveCamera1.jpg" alt=""></p>
+<p>这些参数一起定义了摄像机的viewing frustum（视锥体）。</p>
+<p>StereoCamera( )、ArrayCamera( )…</p>
+<p><font color="#049EF4">.position:</font> 相机位置<br>
+<font color="#049EF4">.lookAt:</font> 相机朝向位置<br>
+<font color="#049EF4">.up:</font> 相机顶部位置</p>
+<p>CSS3<br>
+perspective:视点到显示器的距离，默认none。<br>
+perspective-origin:试点在应用元素的位置，默认中心。</p>
+<h4 id="点线面体与精灵">点线面体与精灵</h4>
+<p><img src="mesh.png" alt=""></p>
+<p><strong>Sprite精灵</strong>是一个总是面朝着摄像机的平面，不会投射任何阴影。</p>
+<h4 id="对象的组成">对象的组成</h4>
+<p><font color="#049EF4">Mesh(Geometry, Material)</font>：创建Mesh网格对象<br>
+geometry = new THREE.CubeGeometry(1,1,1);<br>
+material = new THREE.MeshBasicMaterial({color: ‘#69c0ff’});<br>
+cube = new THREE.Mesh(geometry, material);</p>
+<p><strong>Geometry</strong><br>
+<font color="#049EF4">BufferGeometry()</font><br>
+是面、线或点几何体的有效表述。包括顶点位置，面片索引、法相量、颜色值、UV 坐标和自定义缓存属性值。使用 BufferGeometry 可以有效减少向 GPU 传输上述数据所需的开销。(数据结构不同，缓冲性能更好)</p>
+<p>var geometry = new THREE.BufferGeometry( );</p>
+<p><font color="#049EF4">Geometry()</font><br>
+Geometry 是对 BufferGeometry 的用户有好替代。Geometry 利用 Vector3 或 Color 存储了几何体的相关 attributes（如顶点位置，面信息，颜色等）比起 BufferGeometry 更容易读写，但是运行效率不如有类型的队列。</p>
+<pre><code>var geometry = new THREE.Geometry();
+
+// 点集合
+geometry.vertices.push(
+	new THREE.Vector3( -10,  10, 0 ),
+	new THREE.Vector3( -10, -10, 0 ),
+	new THREE.Vector3(  10, -10, 0 )
+);
+
+//  面集合
+var face = new THREE.Face3( 0, 1, 2, normal, color, materialIndex );
+geometry.faces.push(face);
+var color = new THREE.Color( 0xffaa00 )
+geometry.colors.push(color);
+
+scene.add( new THREE.Mesh( geometry, material ) );
+</code></pre>
+<p>three.js 给出了很多方法去生成固定的网格形状，如：<br>
+长方体(BoxGeometry)、<br>
+球体(SphereGeometry)、<br>
+圆形(CircleGeometry)<br>
+曲线旋转体(LatheGeometry)<br>
+<img src="%E6%9B%B2%E7%BA%BF%E6%97%8B%E8%BD%AC%E4%BD%93.png" alt="data"><br>
+ExtrudeGeometry(二维拉伸成三维)<br>
+<img src="%E4%BA%8C%E7%BB%B4%E6%8B%89%E4%B8%89%E7%BB%B4.png" alt="data"><br>
+TorusKnotGeometry(圆环结)、<br>
+TubeGeometry(拉伸管)…<br>
+还有根据坐标去生成具体形状的方法，可以借助第三方建模软件建模之后导入。<br>
+有一系列支持外部导入文件的辅助函数，是在three.js库之外的，使用前需要额外下载。</p>
+<p><strong>Material</strong><br>
+ShaderMaterial( )</p>
+<p>three.js给出的多种直接生成材质的方法，比较常用的有：<br>
+MeshNormalMaterial（对光照无感，不受渲染时使用的颜色影响的材质，只与自己每一个面从内到外的法向量有关）<br>
+法向量在WebGL中用处十分广泛，光的反射，以及三维图形的纹理映射都与这个有关<br>
+MeshPhongMaterial（对光照有反应，无光源则不会显示，用于创建金属类明亮的物体）、<br>
+MeshLambertMaterial（对光照有反应，无光源则不会显示，用于创建暗淡的不发光的物体）、<br>
+MeshDepthMaterial （使用从摄像机到物体的距离来给网格上色，白近黑远）、<br>
+MeshBasicMaterial（对光照无感，给几何体一种简单的颜色或显示线框）…</p>
+<p><strong>Texture</strong><br>
+纹理：可以简单理解为贴图</p>
+<p><strong>Color</strong></p>
+<p><strong>Light</strong><br>
+物体之所以能被人眼看见，一种是它自身的材料就能发光，不需要借助外界光源；<br>
+另一种是自身材料不发光，需要反射环境中的光。<br>
+对于自身不能发光的物体，需要给场景添加光源从而达到可视的效果。</p>
+<p>three.js中可以创建出很多不同类型的光源，<br>
+点光源（PointLight，放出的光线来自同一点，且方向辐射自四面八方，例如蜡烛发出的光），<br>
+环境光（AmbientLight，它的颜色会添加到整个场景和所有对象的当前颜色上），<br>
+方向光（DirectionalLight，也称无限光，发出的光线可以看作是平行的，例如太阳光），<br>
+聚光灯（SpotLight，从一个锥体中射出，在被照射的物体上产生聚光的效果，例如手电光等）<br>
+平面光（RectAreaLight，模拟像明亮的窗户或者条状灯光光源）</p>
+<p><strong>阴影</strong><br>
+能形成阴影的光源只有：THREE.DirectionalLight与THREE.SpotLight；<br>
+能表现阴影效果的材质只有：THREE.LambertMaterial与THREE.PhongMaterial。<br>
+渲染阴影的开销比较大，所以默认物体是没有阴影的，需要单独开启。<br>
+开启阴影方法：<br>
+将渲染器的shadowMapEnabled属性设置为true（告诉渲染器可以渲染隐形)<br>
+将物体及光源的castShadow属性设置为true（告诉物体及光源可以透射阴影)<br>
+将接收该阴影的物体的receiveShadow属性设置为true（告诉物体可以接收其他物体的阴影）</p>
+<h4 id="渲染器-render">渲染器 (Render)</h4>
+<p><font color="#049EF4">WebGLRenderer( parameters : Object )<br>
+domElement : DOMElement</font><br>
+一个canvas，渲染器在其上绘制输出。<br>
+渲染器的构造函数会自动创建(如果没有传入canvas参数);你需要做的仅仅是像下面这样将它加页面里去:</p>
+<pre><code>renderer = new THREE.WebGLRenderer({
+        antialias: true,
+        alpha: true,
+});
+renderer = document.body.appendChild(renderer.domElement);
+</code></pre>
+<p><font color="#049EF4">setSize ( width : Integer, height : Integer, updateStyle : Boolean )</font><br>
+将输出canvas的大小调整为(width, height)并考虑设备像素比，且将视口从(0, 0)开始调整到适合大小 将updateStyle设置为false以阻止对canvas的样式做任何改变</p>
+<p><font color="#049EF4">render ( scene, camera, renderTarget : WebGLRenderTarget, forceClear : Boolean ) </font><br>
+渲染一般是在canvas上完成的，或者是renderTarget(缓冲区)<br>
+<span style="display:none">如果forceClear值是true，那么颜色、深度及模板缓存将会在渲染之前清除，即使渲染器的autoClear属性值是false<br>
+即便forceClear设为true, 也可以通过将autoClearColor、autoClearStencil或autoClearDepth属性的值设为false来阻止对应缓存被清除。</span></p>
+<p><strong>画面初始化步骤</strong><br>
+1.重置缓存。<br>
+2.更新场景。<br>
+3.更新相机矩阵和视锥体。<br>
+4.初始化 WebGLRenderState。<br>
+5.视景体矩阵计算，为相机的投影矩阵与相机的世界矩阵的逆矩阵的叉乘。<br>
+6.WebGLRenderList 的初始化。<br>
+7.shadow 的绘制。<br>
+8.背景的绘制。<br>
+9.渲染 scene。<br>
+10.如果overrideMaterial，则强制使用场景的材质 overrideMaterial 来统一 render 物体。<br>
+11.分别对 opaque 和 transparent 的物体进行 render。</p>
+<h4 id="控制器">控制器</h4>
+<p><font color="#049EF4">OrbitControls(object: Camera,domElement: HTMLDOMElement)</font>:轨道控制器<br>
+<font color="#049EF4">DragControls(object: Camera,domElement: HTMLDOMElement)</font>:拖动控制器<br>
+<font color="#049EF4">TransformControls(object: Camera,domElement: HTMLDOMElement)</font>:对象控制器<br>
+…</p>
+<h3 id="原理与优化">原理与优化</h3>
+<h4 id="矩阵">矩阵</h4>
+<h4 id="webgl渲染管线">WebGL渲染管线</h4>
+<p>渲染管线指的是WebGL程序的执行过程，主要分为以下个步骤：<br>
+1.顶点着色器的处理，主要是一组矩阵变换操作，用来把3D模型（顶点和原型）投影到viewport上，输出是一个个的多边形，比如三角形。<br>
+2.光栅化，也就是把三角形连接区域按一定的粒度逐行转化成片元（fragement），类似于2D空间中，可以把这些片元看做是3D空间的一个像素点。<br>
+3.片元着色器的处理，为每个片元添加颜色或者纹理。只要给出纹理或者颜色，以及纹理坐标(uv)，管线就会根据纹理坐标进行插值运算，将纹理或者图片着色在相应的片元上。<br>
+4.把3D空间的片元合并输出为2D像素数组并显示在屏幕上:<br>
+  (1)裁剪测试<br>
+  (2)多重采样片段操作<br>
+  (3)背面剔除<br>
+  (4)alpha测试<br>
+  (5)模板测试<br>
+  (6)alpha融合<br>
+  (7)深度测试<br>
+  (8)融合<br>
+5.帧缓存</p>
+<p><strong>获取顶点坐标 =&gt; 图元装配（画出一个个三角形）=&gt; 光栅化（生成一个个像素点)</strong></p>
+<h4 id="threejs做了啥">Three.js做了啥？</h4>
+<p><img src="three-do.png" alt=""></p>
+<h3 id="画个地球">画个地球</h3>
+<p><font color="#049EF4">requestAnimationFrame()</font><br>
+由系统决定回调函数的执行时机。<br>
+60Hz的刷新频率，把每一帧中的所有DOM操作集中起来，在一次重绘或回流中就完成,<br>
+保证回调函数在屏幕每一次的刷新间隔中(16.7ms)只被执行一次，不会引起丢帧，不会卡顿。</p>
+<h3 id="全景看房">全景看房</h3>
+<h3 id="粒子特效">粒子特效</h3>
+<p><a href="https://www.apollozz.com/demo/projects/imageDataP/index.html" target="_blank" rel="noopener">https://www.apollozz.com/demo/projects/imageDataP/index.html</a></p>
+<p><font color="#049EF4">getImageData( )</font><br>
+<img src="https://www.kkkk1000.com/images/getImgData/getImgDatadata.jpg" alt="data"></p>
+<h3 id="三体水滴">三体水滴</h3>
+<p><a href="http://localhost:63342/3D/stemkoski.github.io/Three.js/Metabubbles.html?_ijt=e1nhcfstnklnmtvqbhrrh21joq" target="_blank" rel="noopener">http://localhost:63342/3D/stemkoski.github.io/Three.js/Metabubbles.html?_ijt=e1nhcfstnklnmtvqbhrrh21joq</a></p>
+<h3 id="tweenjs">TWEEN.js</h3>
+<p>生成平滑动画效果的js动画库</p>
+<p><img src="tween.jpg" alt="data"></p>
+<h3 id="demo">Demo</h3>
+<p>地球：<br>
+全景看房：<br>
+粒子特效：</p>
+<h3 id="有趣的实例">有趣的实例</h3>
+<p>淘宝造物节<br>
+腾讯地球：<a href="https://wa.qq.com/xplan/earth/index.html?_wv=1" target="_blank" rel="noopener">https://wa.qq.com/xplan/earth/index.html?_wv=1</a><br>
+腾讯粒子特效：<a href="http://up.qq.com/act/a20170301pre/index.html" target="_blank" rel="noopener">http://up.qq.com/act/a20170301pre/index.html</a><br>
+谷歌地球：<a href="https://experiments.withgoogle.com/chrome/globe" target="_blank" rel="noopener">https://experiments.withgoogle.com/chrome/globe</a><br>
+跑车游戏：<a href="http://hexgl.bkcore.com/" target="_blank" rel="noopener">http://hexgl.bkcore.com/</a><br>
+逼真实物：<a href="http://www.yanhuangxueyuan.com/3D/yuzhuo.html" target="_blank" rel="noopener">http://www.yanhuangxueyuan.com/3D/yuzhuo.html</a><br>
+镜面反射：<a href="https://ithanmang.gitee.io/threejs/home/201809/20180906/01-envMap-cubeCamera-texture.html" target="_blank" rel="noopener">https://ithanmang.gitee.io/threejs/home/201809/20180906/01-envMap-cubeCamera-texture.html</a></p>
+
+
+                <hr>
+                <!-- Pager -->
+                <ul class="pager">
+                    
+                        <li class="previous">
+                            <a href="/in-article/React-Hooks-全局状态管理/" data-toggle="tooltip" data-placement="top" title="React Hooks 全局状态管理">&larr; Previous Post</a>
+                        </li>
+                    
+                    
+                        <li class="next">
+                            <a href="/in-article/仿国外老哥粒子特效/" data-toggle="tooltip" data-placement="top" title="仿国外老哥粒子特效">Next Post &rarr;</a>
+                        </li>
+                    
+                </ul>
+
+                <br>
+
+                <!--打赏-->
+                <!---->
+                <!--打赏-->
+
+                <br>
+                <!--分享-->
+                
+                    <div class="social-share"  data-wechat-qrcode-helper="" align="center"></div>
+                    <!--  css & js -->
+                    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/css/share.min.css">
+                    <script src="https://cdnjs.cloudflare.com/ajax/libs/social-share.js/1.0.16/js/social-share.min.js"></script>
+                
+                <!--分享-->
+                <br>
+                
+                <!-- require APlayer -->
+                <!---->
+
+                <!-- duoshuo Share start -->
+                <!---->
+
+                <!-- 多说 Share end-->
+
+                <!-- 多说评论框 start
+                
+                 多说评论框 end
+
+                 disqus comment start
+                
+                 disqus comment end -->
+
+                
+
+            </div>
+            
+            <!-- Tabe of Content -->
+            <!-- Table of Contents -->
+
+  
+    <style>
+      span.toc-nav-number{
+        display: none
+      }
+    </style>
+  
+    
+      <aside id="sidebar">
+        <div id="toc" class="toc-article">
+        <strong class="toc-title">Contents</strong>
+        
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#背景介绍"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">&#x80CC;&#x666F;&#x4ECB;&#x7ECD;</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#opengl与webgl"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text">OpenGL&#x4E0E;WebGL</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#threejs"><span class="toc-nav-number">1.2.</span> <span class="toc-nav-text">THREE.JS</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#构成组件"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">&#x6784;&#x6210;&#x7EC4;&#x4EF6;</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#场景"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text">&#x573A;&#x666F;</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#相机camera"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text">&#x76F8;&#x673A;&#xFF08;Camera&#xFF09;</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#点线面体与精灵"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text">&#x70B9;&#x7EBF;&#x9762;&#x4F53;&#x4E0E;&#x7CBE;&#x7075;</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#对象的组成"><span class="toc-nav-number">2.4.</span> <span class="toc-nav-text">&#x5BF9;&#x8C61;&#x7684;&#x7EC4;&#x6210;</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#渲染器-render"><span class="toc-nav-number">2.5.</span> <span class="toc-nav-text">&#x6E32;&#x67D3;&#x5668; (Render)</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#控制器"><span class="toc-nav-number">2.6.</span> <span class="toc-nav-text">&#x63A7;&#x5236;&#x5668;</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#原理与优化"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">&#x539F;&#x7406;&#x4E0E;&#x4F18;&#x5316;</span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#矩阵"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text">&#x77E9;&#x9635;</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#webgl渲染管线"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text">WebGL&#x6E32;&#x67D3;&#x7BA1;&#x7EBF;</span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#threejs做了啥"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text">Three.js&#x505A;&#x4E86;&#x5565;&#xFF1F;</span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#画个地球"><span class="toc-nav-number">4.</span> <span class="toc-nav-text">&#x753B;&#x4E2A;&#x5730;&#x7403;</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#全景看房"><span class="toc-nav-number">5.</span> <span class="toc-nav-text">&#x5168;&#x666F;&#x770B;&#x623F;</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#粒子特效"><span class="toc-nav-number">6.</span> <span class="toc-nav-text">&#x7C92;&#x5B50;&#x7279;&#x6548;</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#三体水滴"><span class="toc-nav-number">7.</span> <span class="toc-nav-text">&#x4E09;&#x4F53;&#x6C34;&#x6EF4;</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#tweenjs"><span class="toc-nav-number">8.</span> <span class="toc-nav-text">TWEEN.js</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#demo"><span class="toc-nav-number">9.</span> <span class="toc-nav-text">Demo</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#有趣的实例"><span class="toc-nav-number">10.</span> <span class="toc-nav-text">&#x6709;&#x8DA3;&#x7684;&#x5B9E;&#x4F8B;</span></a></li></ol>
+        
+        </div>
+      </aside>
+    
+
+                
+            <!-- Sidebar Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                       
+                          <a class="tag" href="/tags/#Skill" title="Skill">Skill</a>
+                        
+                          <a class="tag" href="/tags/#Notes" title="Notes">Notes</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+
+                    
+                        <li><a href="" target="_blank">有不少，广告位。</a></li>
+                    
+                        <li><a href="" target="_blank">两块包月，过时不候。</a></li>
+                    
+                        <li><a href="" target="_blank">现在是，赞助时间。</a></li>
+                    
+                        <li><a href="" target="_blank">以后火了，可别后悔。</a></li>
+                    
+                </ul>
+                
+            </div>
+        </div>
+    </div>
+</article>
+
+<!---->
+
+<!---->
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("https://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'hover',
+          placement: 'left',
+          icon: 'ℬ'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                
+                
+                
+
+                
+
+                
+
+                
+                    <li>
+                        <a target="_blank"  href="https://github.com/liuxiayang">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; 刘夏阳 2020 
+                    <br>
+                    Theme by <a href="http://beantech.org">BeanTech</a> 
+                    <span style="display: inline-block; margin: 0 5px;">
+                        <i class="fa fa-heart"></i>
+                    </span> 
+                    re-Ported by <a href="http://www.huweihuang.com">胡伟煌</a> | 
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="91px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=huweihuang&repo=hexo-theme-huweihuang&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js"></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- 
+     Because of the native support for backtick-style fenced code blocks 
+     right within the Markdown is landed in Github Pages, 
+     From V1.6, There is no need for Highlight.js, 
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("http://yoursite.com/liuxiayang.github.io/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+<script>
+    // dynamic User by Hux
+    var _gaId = 'UA-XXXXXXXX-X';
+    var _gaDomain = 'yoursite';
+
+    // Originial
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', _gaId, _gaDomain);
+    ga('send', 'pageview');
+</script>
+
+
+
+
+<!-- Baidu Tongji -->
+
+<script>
+    // dynamic User by Hux
+    var _baId = 'xxx';
+
+    // Originial
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?" + _baId;
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+
+
+
+	<a id="rocket" href="#top" class=""></a>
+	<script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+    <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
+    <script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <script>
+    </script>
+<!-- Image to hack wechat -->
+<!--<img src="http://yoursite.com/liuxiayang.github.io/img/icon_wechat.png" width="0" height="0" />-->
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/tororo.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":true},"log":false});</script></body>
+
+</html>

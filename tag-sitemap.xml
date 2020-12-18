@@ -9,13 +9,6 @@
     </url>
 
     <url>
-        <loc>http://yoursite.com/liuxiayang.github.io/tags/Impression/</loc>
-        <lastmod>2020-12-16T12:07:54.090Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://yoursite.com/liuxiayang.github.io/tags/Travel/</loc>
         <lastmod>2020-12-16T12:07:54.119Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -30,20 +23,6 @@
     </url>
 
     <url>
-        <loc>http://yoursite.com/liuxiayang.github.io/tags/Notes/</loc>
-        <lastmod>2020-12-16T12:55:44.145Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
-        <loc>http://yoursite.com/liuxiayang.github.io/tags/React/</loc>
-        <lastmod>2020-12-16T12:55:44.145Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://yoursite.com/liuxiayang.github.io/tags/Daily/</loc>
         <lastmod>2020-12-16T12:56:47.260Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -51,8 +30,29 @@
     </url>
 
     <url>
+        <loc>http://yoursite.com/liuxiayang.github.io/tags/Impression/</loc>
+        <lastmod>2020-12-18T11:07:48.702Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
         <loc>http://yoursite.com/liuxiayang.github.io/tags/Skill/</loc>
-        <lastmod>2020-12-16T18:42:04.722Z</lastmod>
+        <lastmod>2020-12-18T11:08:29.163Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://yoursite.com/liuxiayang.github.io/tags/Notes/</loc>
+        <lastmod>2020-12-18T11:08:29.163Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://yoursite.com/liuxiayang.github.io/tags/React/</loc>
+        <lastmod>2020-12-18T11:08:29.163Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

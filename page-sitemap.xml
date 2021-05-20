@@ -7,6 +7,13 @@
     </url>
     
     <url>
+        <loc>http://yoursite.com/liuxiayang.github.io/about/</loc>
+        <lastmod>2021-05-20T12:35:12.933Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.8</priority>
+    </url>
+    
+    <url>
         <loc>http://yoursite.com/liuxiayang.github.io/tags/</loc>
         <lastmod>2020-12-16T12:07:54.285Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -23,13 +30,6 @@
     <url>
         <loc>http://yoursite.com/liuxiayang.github.io/archive/</loc>
         <lastmod>2020-12-16T12:07:54.125Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    
-    <url>
-        <loc>http://yoursite.com/liuxiayang.github.io/about/</loc>
-        <lastmod>2020-12-16T12:07:54.124Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.8</priority>
     </url>

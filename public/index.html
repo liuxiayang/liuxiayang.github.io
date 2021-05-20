@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="liuxiayang blog">
+    <meta name="keyword"  content="">
+    <meta name="baidu-site-verification" content="rRxKjxYx37" />
+    <!--<link rel="shortcut icon" href="/img/ironman-draw.png">-->
+    <!-- Place this tag in your head or just before your close body tag. -->
+    <script async defer src="https://buttons.github.io/buttons.js"></script>
+    <title>
+        
+          刘夏阳 | Blog
+        
+    </title>
+
+    <link rel="canonical" href="http://yoursite.com/liuxiayang.github.io/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS --> 
+    <link rel="stylesheet" href="/css/beantech.min.css">
+
+    <link rel="stylesheet" href="/css/donate.css">
+    
+    <!-- Pygments Highlight CSS -->
+    <link rel="stylesheet" href="/css/highlight.css">
+
+    <link rel="stylesheet" href="/css/widget.css">
+
+    <link rel="stylesheet" href="/css/rocket.css">
+
+    <link rel="stylesheet" href="/css/signature.css">
+
+    <link rel="stylesheet" href="/css/toc.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="https://cdn.staticfile.org/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Hux Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+	<!-- Modified by Yu-Hsuan Yen -->
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        
+            background-image: url(https://github.com/liuxiayang/pic/blob/master/wallpaper/firework-mirror.jpg?raw=true)
+            /*config*/
+        
+    }
+    /*<!---->*/
+</style>
+
+<header class="intro-header" >
+    <!-- Signature -->
+    <div id="signature">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                
+                    <div class="site-heading">
+                        <h1>劉夏陽</h1>
+                        <!--<hr class="small">-->
+                        <span class="subheading">Yahellow，小窝被发现了。</span>
+                    </div>
+                
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+	
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">劉夏陽</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                    
+
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/archive/">Archives</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">Me</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/others/">Others</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- Main Content -->
+    <!-- Main Content -->
+<div class="container">
+    <div class="row">
+        
+
+<!-- USE SIDEBAR -->
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-1
+                col-md-8 col-md-offset-1
+                col-sm-12
+                col-xs-12
+                post-container
+            ">
+            
+                
+    <div class="post-preview">
+    <a href="/in-article/收藏hahaha/">
+        <h2 class="post-title">
+            收藏hahaha
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            世界上最奇妙三件事：被学霸叫学霸、被大佬叫大佬、被傻逼叫傻逼。
+都是一个东西，我说你游戏玩的吊，你就很开心，我说你游戏玩的几把，你凭什么骂我？
+乌龟受伤.让蜗牛去买药。过了2个小时.蜗牛还没回来。乌龟急了骂道:他妈的再不回来老子就死了!这时门外传来了蜗牛的声音:你他妈再说老子不去了!
+一老头退休后闲的无聊，于是便天天教鹦鹉说话！每早必教它说：“早上好！”可是几个月过后，鹦鹉仍不开口。老头为此......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by 刘夏阳 last updated on
+            2020-12-18, created on
+            2019-07-19.
+        </p>
+        <div class="tags">
+            
+        </div>
+    
+</div>
+<hr>
+
+    <div class="post-preview">
+    <a href="/in-article/有趣的知识来者不拒/">
+        <h2 class="post-title">
+            有趣的知识来者不拒
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            你和XYZ的博物未来
+蓝牙的来历（bluetooth）
+丹麦王哈拉尔一世，他有颗黑色的牙，
+英语中蓝色有时也代表黑色，所以绰号bluetooth。
+他征服了北欧，连接了很多不同的国家，
+和蓝牙很相似，蓝牙又是在丹麦发明的，
+所以就把这项技术命名为bluetooth。
+他的后人也很牛逼，把英格兰纳入了版图，
+史称北海帝国，把北海变成了丹麦人的内海
+...
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by 刘夏阳 last updated on
+            2020-12-18, created on
+            2020-07-08.
+        </p>
+        <div class="tags">
+            
+        </div>
+    
+</div>
+<hr>
+
+    <div class="post-preview">
+    <a href="/in-article/仿国外老哥粒子特效/">
+        <h2 class="post-title">
+            仿国外老哥粒子特效
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            three.js
+最近在学习three.js，
+仿了一个国外老哥的粒子特效：https://www.apollozz.com/demo/projects/imageDataP/index.html
+没有源码，具体细节苦逼的施施而行，
+大概90%像，使劲拉会有bug，一般满意。
+记录一下自己踩的坑与经验~
+...
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by 刘夏阳 last updated on
+            2020-12-18, created on
+            2019-10-14.
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Skill" title="Skill">Skill</a>
+            
+        </div>
+    
+</div>
+<hr>
+
+    <div class="post-preview">
+    <a href="/in-article/有趣的Web-3D/">
+        <h2 class="post-title">
+            有趣的Web-3D
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            背景介绍
+OpenGL与WebGL
+    [OpenGL]是关于2维3维计算机图形技术，Khronos Group对各种技术进行了标准化并制定了[OpenGL]，作为Windows、Mac、Linux上的一种跨平台技术并一直活跃着。Khronos Group把这样的OpenGL技术运用到WEB浏览器并制定了WebGL。WebGL 是 OpenGL 和 JavaScript 之间的结晶，HT......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by 刘夏阳 last updated on
+            2020-12-18, created on
+            2019-10-28.
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Skill" title="Skill">Skill</a>
+            
+              <a href="/tags/#Notes" title="Notes">Notes</a>
+            
+        </div>
+    
+</div>
+<hr>
+
+    <div class="post-preview">
+    <a href="/in-article/React-Hooks-全局状态管理/">
+        <h2 class="post-title">
+            React Hooks 全局状态管理
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            今天很开心，完成了一个简易的全局状态管理，记录一下自己的心路历程。
+从上个项目开始，数据的流动变得无序且复杂了起来，
+尝试使用Redux，因为操作比自己props数据还繁琐，放弃 =。=，
+经历了一个项目迭代的折磨后，终于下定决心要使用全局的数据流管理。
+于是想找个简易的方案，不想使用框架
+百度过后发现 useContext + useReducer 可以实现，
+但是自己手写的话会不会不成熟......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by 刘夏阳 last updated on
+            2020-12-18, created on
+            2020-03-12.
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Skill" title="Skill">Skill</a>
+            
+              <a href="/tags/#Notes" title="Notes">Notes</a>
+            
+              <a href="/tags/#React" title="React">React</a>
+            
+        </div>
+    
+</div>
+<hr>
+
+    <div class="post-preview">
+    <a href="/有感而发/动漫/">
+        <h2 class="post-title">
+            动漫
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+                   不说阅番无数，也算博览群番，一年前还保守估计自己能看动漫到 29，可最近不是很想看动漫，是合口味的动漫看的差不多了？还是已经过了看动漫的年纪了？希望是前者吧。
+先来一波值得一看的番
+《acca13区监察科》8.5
+稍显特别的画风，张弛有度的剧情，风格迥异的国家，吉恩香烟与甜品。
+前面的每一集都有种旅游的轻松感。
+《Relife》ing
+看到一半 海星吧，看完来评
+《男高》9.4......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by 刘夏阳 last updated on
+            2020-12-18, created on
+            2019-05-16.
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Impression" title="Impression">Impression</a>
+            
+        </div>
+    
+</div>
+<hr>
+
+    <div class="post-preview">
+    <a href="/in-article/爸爸去哪了/">
+        <h2 class="post-title">
+            爸爸去哪了
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            重庆：老火锅好吃，路不好走，10多年了变化真大啊。
+泰国：人妖好壮，非要握手。
+澳门：下次一定要去赌场免费吃喝！听说还有个西餐学校
+广西：露天桑拿，最爽的一次漂流，硬座24小时。
+云南：天天三国杀打到凌晨，第二天还要早起。
+厦门：和成都一样安逸，海鲜吃到吐。
+海南：划不来
+深圳：姑姑家，这就是大佬的生活吗。
+四川：漂流牛掉激流里了对着我喊救我，哈哈哈（就记得你渴望的小眼神了）
+...
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by 刘夏阳 last updated on
+            2020-12-16, created on
+            2019-10-11.
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Travel" title="Travel">Travel</a>
+            
+        </div>
+    
+</div>
+<hr>
+
+    <div class="post-preview">
+    <a href="/有感而发/再看《笑傲江湖》/">
+        <h2 class="post-title">
+            再看《笑傲江湖》
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            时隔十多年又看了央视翻拍金庸老先生的《笑傲江湖》，
+心中不禁思绪万千，念念不忘。
+有了不少新的看法，不吐不快！
+1.对岳不群看法改变，自己思绪的成长
+小时候觉得这个人也太坏了吧
+现在一想，他又能怎么办呢？
+我现在觉得他已经做的很好了，他也不是一开始就有这么大的野心，
+没办法，性格和现实让他变成了这个模样。
+巍子老师演的感觉真到位！
+2.对林平之岳灵珊的悲剧感到惋惜
+小时候就主要想着母女俩的惨......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by 刘夏阳 last updated on
+            2019-08-30, created on
+            2019-08-19.
+        </p>
+        <div class="tags">
+            
+              <a href="/tags/#Impression" title="Impression">Impression</a>
+            
+        </div>
+    
+</div>
+<hr>
+
+    <div class="post-preview">
+    <a href="/in-article/文化人/">
+        <h2 class="post-title">
+            文化人~
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            字念错啦
+骰(tóu)子、霰(xiàn)弹枪、荨(qián)麻
+剀切（kǎi qiè）：跟事理完全相合。
+
+廾匸
+读音是
+gong xi
+译为掩藏
+
+惨绿少年：本意指穿着淡绿衣服的少年，后也指衣着讲究的少年，引申为风度翩翩的青年男子。
+出自张固《幽闲鼓吹》
+话说唐代户部侍郎潘孟阳请同僚们回家吃饭，他母亲躲在屏风后面偷偷看这些少年。
+看完了，说都不是好货色，独独问，“末座惨绿少年何人？&quo......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by 刘夏阳 last updated on
+            2020-12-16, created on
+            2019-07-31.
+        </p>
+        <div class="tags">
+            
+        </div>
+    
+</div>
+<hr>
+
+    <div class="post-preview">
+    <a href="/in-article/书单/">
+        <h2 class="post-title">
+            书单
+        </h2>
+        <h3 class="post-subtitle">
+            
+        </h3>
+        <div class="post-content-preview">
+            视野
+《人类简史》
+《未来简史》ing
+1.恐怖主义的手段是散播恐惧，而不是造成严重的实质性伤害。
+《游戏改变世界》
+《歪门正道》
+《非是非非》ing
+《那些古怪又让人忧心的问题》
+《三体》
+给文明以岁月,而不是给岁月以文明
+推理
+《恶意》
+排第一！当时看完真的惊艳到我了，以至于一段时间内看其他诡计都觉得索然无味。
+《白夜行》
+自觉并没有吹的那么好，可能推理元素并不是特别硬核吧。
+《嫌疑犯X......
+        </div>
+    </a>
+    
+        <p class="post-meta" style="margin: 10px 0;">
+            Posted by 刘夏阳 last updated on
+            2020-12-16, created on
+            2019-07-19.
+        </p>
+        <div class="tags">
+            
+        </div>
+    
+</div>
+<hr>
+
+
+<!-- Pager -->
+
+<ul class="pager">
+    
+    
+        <li class="next">
+            <a href="/archives/2/">Older Posts &rarr;</a>
+        </li>
+    
+</ul>
+
+
+
+                <br>
+
+                <!-- require APlayer -->
+                <!---->
+
+                <!-- 如果开启评论功能 -->
+                
+            </div>
+
+          <!-- Sidebar Container -->
+<div class="
+    col-lg-3 col-lg-offset-0
+    col-md-3 col-md-offset-0
+    col-sm-12
+    col-xs-12
+    sidebar-container
+">
+    
+        <!-- Featured Tags -->
+
+<section>
+    <!-- no hr -->
+    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+    <div class="tags">
+        
+            
+            <a href="/tags/#Skill" title="Skill" rel="6">Skill</a>
+            
+        
+            
+            <a href="/tags/#Notes" title="Notes" rel="3">Notes</a>
+            
+        
+            
+        
+            
+        
+            
+            <a href="/tags/#Impression" title="Impression" rel="3">Impression</a>
+            
+        
+            
+        
+            
+        
+            
+            <a href="/tags/#Economics" title="Economics" rel="2">Economics</a>
+            
+        
+    </div>
+</section>
+
+        <hr>
+    
+        <!-- Short About -->
+<section class="visible-md visible-lg">
+    <h5><a href="/about/">ABOUT ME</a></h5>
+    <div class="short-about">
+
+        
+            <img id = "avatar_pic" src="/img/avatar/Hikigaya.Hachiman.jpg" />
+        
+
+        
+            <p>世界变变变变变更好</p>
+        
+
+        <!-- SNS Link -->
+        <ul class="list-inline">
+            
+            
+            
+
+            
+
+            
+
+            
+                <li>
+                    <a target="_blank"  href="https://github.com/liuxiayang">
+                        <span class="fa-stack fa-lg">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                        </span>
+                    </a>
+                </li>
+            
+            
+            
+            
+        </ul>
+    </div>
+</section>
+
+        <hr>
+    
+        
+  <h5>RECENT POSTS</h3>
+  <div class="widget">
+    <ul>
+      
+        <li>
+          <a href="/in-article/有趣的知识来者不拒/">有趣的知识来者不拒</a>
+        </li>
+      
+        <li>
+          <a href="/in-article/React-Hooks-全局状态管理/">React Hooks 全局状态管理</a>
+        </li>
+      
+        <li>
+          <a href="/in-article/有趣的Web-3D/">有趣的Web-3D</a>
+        </li>
+      
+        <li>
+          <a href="/in-article/仿国外老哥粒子特效/">仿国外老哥粒子特效</a>
+        </li>
+      
+        <li>
+          <a href="/in-article/爸爸去哪了/">爸爸去哪了</a>
+        </li>
+      
+    </ul>
+  </div>
+
+        <hr>
+    
+        <!-- Friends Blog -->
+
+<h5>FRIENDS</h5>
+<ul class="list-inline">
+
+    
+        <li><a href="" target="_blank">有不少，广告位。</a></li>
+    
+        <li><a href="" target="_blank">两块包月，过时不候。</a></li>
+    
+        <li><a href="" target="_blank">现在是，赞助时间。</a></li>
+    
+        <li><a href="" target="_blank">以后火了，可别后悔。</a></li>
+    
+</ul>
+
+        <hr>
+    
+        
+    <h5>ARCHIVES</h5>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/07/">July 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2020/03/">March 2020</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/10/">October 2019</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/08/">August 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/07/">July 2019</a><span class="archive-list-count">5</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/06/">June 2019</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/05/">May 2019</a><span class="archive-list-count">9</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2019/04/">April 2019</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/09/">September 2018</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+
+        <hr>
+    
+    <div>茫茫人海，</div>
+    <div>你是第<span id="busuanzi_value_site_uv"></span>个来本窝的。</div>
+    <div>本窝已被疯狂点击<span id="busuanzi_value_site_pv"></span>次了！</div>
+</div>
+
+        
+    </div>
+</div>
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                
+                
+                
+
+                
+
+                
+
+                
+                    <li>
+                        <a target="_blank"  href="https://github.com/liuxiayang">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    ChangeRight &copy; 刘夏阳 2021 
+                    <br>
+                    Theme by <a href="http://beantech.org">BeanTech</a> 
+                    <span style="display: inline-block; margin: 0 5px;">
+                        <i class="fa fa-heart"></i>
+                    </span> 
+                    re-Ported by <a href="http://www.huweihuang.com">胡伟煌</a> | 
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="91px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=huweihuang&repo=hexo-theme-huweihuang&type=star&count=true" >
+                    </iframe>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js"></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- 
+     Because of the native support for backtick-style fenced code blocks 
+     right within the Markdown is landed in Github Pages, 
+     From V1.6, There is no need for Highlight.js, 
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("http://yoursite.com/liuxiayang.github.io/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("https://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+<script>
+    // dynamic User by Hux
+    var _gaId = 'UA-XXXXXXXX-X';
+    var _gaDomain = 'yoursite';
+
+    // Originial
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', _gaId, _gaDomain);
+    ga('send', 'pageview');
+</script>
+
+
+
+
+<!-- Baidu Tongji -->
+
+<script>
+    // dynamic User by Hux
+    var _baId = 'xxx';
+
+    // Originial
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?" + _baId;
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+
+
+
+	<a id="rocket" href="#top" class=""></a>
+	<script type="text/javascript" src="/js/totop.js?v=1.0.0" async=""></script>
+    <script type="text/javascript" src="/js/toc.js?v=1.0.0" async=""></script>
+    <script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+    <script>
+    </script>
+<!-- Image to hack wechat -->
+<!--<img src="http://yoursite.com/liuxiayang.github.io/img/icon_wechat.png" width="0" height="0" />-->
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/tororo.model.json"},"display":{"position":"left","width":150,"height":300},"mobile":{"show":true},"log":false});</script></body>
+
+</html>

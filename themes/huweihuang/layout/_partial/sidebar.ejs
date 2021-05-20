@@ -1,0 +1,16 @@
+<!-- Sidebar Container -->
+<div class="
+    col-lg-3 col-lg-offset-0
+    col-md-3 col-md-offset-0
+    col-sm-12
+    col-xs-12
+    sidebar-container
+">
+    <% theme.widgets.forEach(function(widget){ %>
+        <%- partial('_widget/' + widget) %>
+        <hr>
+    <% }) %>
+    <div>茫茫人海，</div>
+    <div>你是第<span id="busuanzi_value_site_uv"></span>个来本窝的。</div>
+    <div>本窝已被疯狂点击<span id="busuanzi_value_site_pv"></span>次了！</div>
+</div>

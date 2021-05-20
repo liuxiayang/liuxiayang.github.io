@@ -31,7 +31,7 @@ fixed: false
 
 ### 投喂我
 
-我攒够了想请你喝奶茶。
+攒够了想请投喂的老板们喝奶茶。
 
 ![zfbscan](https://raw.githubusercontent.com/liuxiayang/pic/master/wallpaper/zfb-scan.jpeg)
 

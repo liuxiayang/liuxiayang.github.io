@@ -155,14 +155,14 @@
 
                         
                         <li>
-                            <a href="/others/">Others</a>
+                            <a href="/tags/">Tags</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/tags/">Tags</a>
+                            <a href="/others/">Others</a>
                         </li>
                         
                     
@@ -274,8 +274,8 @@ margin-left: -200px;<br>
 外部环境的引用（outer Lexical Environment）：指它可以访问其父级词法环境（即作用域）。<br>
 环境记录器 （Environment Record）：存储变量和函数声明的实际位置。（声明式环境记录器，对象式环境记录器是两个比较主要环境记录器）<br>
 词法环境中含有外部词法环境的引用，我们可以通过这个引用获取外部词法环境的变量、声明等，<br>
-这些引用串联起来一直指向全局的词法环境，因此形成了<strong><em>作用域链</em></strong>。<br>
-词法环境中含有外部词法环境的引用，我们可以通过这个引用获取外部词法环境的变量、声明等，因此形成了<strong><em>闭包</em></strong>。<br>
+这些引用串联起来一直指向全局的词法环境，因此形成了**<em>作用域链</em><strong>。<br>
+词法环境中含有外部词法环境的引用，我们可以通过这个引用获取外部词法环境的变量、声明等，因此形成了</strong><em>闭包</em>**。<br>
 <strong>执行阶段：</strong><br>
 创建执行上下文(运行时确定，可改变): 1.处理函数声明 2.处理变量声明<br>
 (变量名称跟已经声明的形式参数或函数相同，则不会干扰已经存在的这类属性)<br>
@@ -289,7 +289,7 @@ margin-left: -200px;<br>
 作用域是和每次函数调用时变量的访问有关，并且每次调用都是独立的。<br>
 上下文总是关键字 this 的值，是调用当前可执行代码的对象的引用。<br>
 作用域是函数定义的时候就确定好的了，函数当中的变量是和函数所处的作用域有关，函数运行的作用域也是与该函数定义时的作用域有关。<br>
-而上下文，主要是关键字this的值，这个是由函数运行时决定的，简单来说就是谁调用此函数，this就指向谁。</p>
+而上下文，主要是关键字 this 的值，这个是由函数运行时决定的，简单来说就是谁调用此函数，this 就指向谁。</p>
 <p>作用域只是一个“地盘”，其中没有变量。变量是通过作用域对应的执行上下文环境中的变量对象来实现的。所以作用域是静态观念的，而执行上下文环境是动态上的，两者并不一样。有闭包存在时，一个作用域存在两个上下文环境也是有的。也就是说，作用域只是用于划分你在这个作用域里面定义的变量的有效范围，出了这个作用域就无效</p>
 <p>同一个作用域下，对同一个函数的不同的调用会产生不同的执行上下文环境，继而产生不同的变量的值，所以，作用域中变量的值是在执行过程中确定的，而作用域是在函数创建时就确定的。如果要查找一个作用域下某个变量的值，就需要找到这个作用域对应的执行上下文环境，再在其中找到变量的值。</p>
 <p>实例：函数柯里化 + 隐式转换</p>
@@ -424,14 +424,8 @@ Fiber：一种将 recocilation （递归 diff），拆分成无数个小任务�
 </code></pre>
 <h4 id="diff-算法">Diff 算法</h4>
 <p>三个假设<br>
-<a href="http://1.web" target="_blank" rel="noopener">1.web</a> ui 中 Dom 节点跨层级的移动操作很少,diff 算法比较新旧节点的时候，比较只会在同层级比较，不会跨层级比较。<br>
-2.拥有相同类的两个组件将会生成相似的树形结构，拥有不同类的两个组件将会生成不同的树形结构。<br>
-3.对于同一层级的一组子节点，他们可以通过唯一 key 进行区分。</p>
-<p>四个步骤<br>
-1.用JS对象模拟DOM（虚拟DOM）<br>
-2.把此虚拟DOM转成真实DOM并插入页面中（render）<br>
-3.如果有事件发生修改了虚拟DOM，比较两棵虚拟DOM树的差异，得到差异对象（diff）<br>
-4.把差异对象应用到真正的DOM树上（patch）</p>
+<a href="http://1.web" target="_blank" rel="noopener">1.web</a> ui 中 Dom 节点跨层级的移动操作很少,diff 算法比较新旧节点的时候，比较只会在同层级比较，不会跨层级比较。 2.拥有相同类的两个组件将会生成相似的树形结构，拥有不同类的两个组件将会生成不同的树形结构。 3.对于同一层级的一组子节点，他们可以通过唯一 key 进行区分。</p>
+<p>四个步骤 1.用 JS 对象模拟 DOM（虚拟 DOM） 2.把此虚拟 DOM 转成真实 DOM 并插入页面中（render） 3.如果有事件发生修改了虚拟 DOM，比较两棵虚拟 DOM 树的差异，得到差异对象（diff） 4.把差异对象应用到真正的 DOM 树上（patch）</p>
 <p>建议，在开发组件时，保持稳定的 DOM 结构会有助于性能的提升； 建议，在开发过程中，尽量减少类似将最后一个节点移动到列表首部的操作</p>
 <p>React Router<br>
 哈希| history | creatememoryhistory(无 dom 环境，node/RN）<br>
@@ -491,16 +485,9 @@ LRU / 排列组合 – 应用类算法<br>
 深度优先 / 广度优先</p>
 <h3 id="浏览器">浏览器</h3>
 <h4 id="页面加载优化">页面加载优化</h4>
-<p>1.使用动态 import，切分页面代码，减小首屏 JS 体积；<br>
-2.对版本、基础框架等进行缓存，本地缓存；<br>
-3.使用 SplitChunksPlugin 拆分公共代码；<br>
-4.在 HTML 内实现 Loading 态或者骨架屏；<br>
-5.css、js代码优化</p>
-<p>8.使用动态 polyfill；<br>
-5.使用 SplitChunksPlugin 拆分公共代码；<br>
-6.正确地使用 Webpack4.0 的 Tree Shaking；<br>
-8.编译到 ES2015+，提高代码运行效率，减小体积；<br>
-9.使用 lazyload 和 placeholder 提升加载体验；<br>
+<p>1.使用动态 import，切分页面代码，减小首屏 JS 体积； 2.对版本、基础框架等进行缓存，本地缓存； 3.使用 SplitChunksPlugin 拆分公共代码； 4.在 HTML 内实现 Loading 态或者骨架屏；<br>
+5.css、js 代码优化</p>
+<p>8.使用动态 polyfill； 5.使用 SplitChunksPlugin 拆分公共代码； 6.正确地使用 Webpack4.0 的 Tree Shaking； 8.编译到 ES2015+，提高代码运行效率，减小体积； 9.使用 lazyload 和 placeholder 提升加载体验；<br>
 …</p>
 <h4 id="api">API</h4>
 <p>window.performance.timing:获取页面渲染所相关的数据</p>
@@ -551,8 +538,7 @@ ncu -u<br>
 npm install</p>
 <p>2.nrm 切换 npm 源</p>
 <h3 id="提高效率">提高效率</h3>
-<p>1.不主动引入组件，编辑器自动引入<br>
-2.快速生成模板 rcc + tab （<a href="https://blog.csdn.net/weixin_43606158/article/details90900061%EF%BC%89" target="_blank" rel="noopener">https://blog.csdn.net/weixin_43606158/article/details90900061）</a><br>
+<p>1.不主动引入组件，编辑器自动引入 2.快速生成模板 rcc + tab （<a href="https://blog.csdn.net/weixin_43606158/article/details90900061%EF%BC%89" target="_blank" rel="noopener">https://blog.csdn.net/weixin_43606158/article/details90900061）</a><br>
 3.Mac 为何 F*系列组合快捷键无效？ Fn + F6 + shift = 重命名</p>
 <h3 id="业务经验">业务经验</h3>
 <p>1.Select 组件<br>
@@ -590,7 +576,7 @@ ETag/If-Not-Match(精确判断资源是否被修改)、Last-Modified/If-Modified
 302 资源临时从不同的 URI 响应请求,<br>
 304 缓存重定向,<br>
 400 请求语义参数问题,<br>
-401 验证用户,<br>
+401 验证用户,···<br>
 403 服务器拒绝,<br>
 404 找不到资源地址,<br>
 422 格式正确语义错误,<br>
@@ -599,13 +585,15 @@ ETag/If-Not-Match(精确判断资源是否被修改)、Last-Modified/If-Modified
 502 网关代理服务失败<br>
 503 过载<br>
 504 超时</p>
-<p>自我介绍：别人的形容是一个阳光的逗比，要自己说尽在博客’<a href="http://liuxiayang.github.io" target="_blank" rel="noopener">liuxiayang.github.io</a>’ 和公众号’你和XYZ的博物未来(暂时还没东西)'<br>
-身高：171<br>
-星座：金牛<br>
-现居：成都（籍贯四川绵阳）<br>
-邮箱：446520502@qq.com<br>
-岗位：前端开发工程师<br>
-希望她: 善良真诚，简单乐观，如果是个喜欢推理、看番、唱歌、体育的可爱姑娘就更好了(93-98)</p>
+<p>ccs 动画为什么比 js 效率高？<br>
+第一点<br>
+从实现动画的复杂度来看，CSS 动画大多数都是补间动画，而 JS 动画是逐帧动画。当然这里我们不谈论实现的效果<br>
+第二点<br>
+编码的高效，采用 JS 去实现的动画，无论多简单的动画，都需要去控制整个过程，当然你可能会说可以采用一些库来解决这些问题，但是这些库的实际运行可能要比原生实现的效率要低的多<br>
+第三点<br>
+性能的高效，在我们前面讲到了回流和重绘，如果我们要操作一个元素向右移动，我们可能需要控制 dom.style.left 属性，每次来改变元素的位置，而结合我们所说的，几何属性的改变必然会引起回流，回流必然引起重绘，可想而知如果我们采用 JS 来实现动画，这个代价有多大，这会造成浏览器在不断的计算页面，从而导致浏览器内存堆积。同时由于 JavaScript 运行在浏览器的主线程中，主线程中还有其他的重要任务在运行，因而可能会受到干扰导致线程阻塞，从而丢帧<br>
+而 CSS 的动画是运行在合成线程中的，不会阻塞主线程，并且在合成线程中完成的动作不会触发回流和重绘<br>
+当然还有一个重要的点：JS 动画运行在 CPU，而 CSS 动画运行在 GPU</p>
 
 
                 <hr>
@@ -796,7 +784,7 @@ ETag/If-Not-Match(精确判断资源是否被修改)、Last-Modified/If-Modified
 
                 </ul>
                 <p class="copyright text-muted">
-                    ChangeRight &copy; 刘夏阳 2021 
+                    ChangeRight &copy; 刘夏阳 2022 
                     <br>
                     Theme by <a href="http://beantech.org">BeanTech</a> 
                     <span style="display: inline-block; margin: 0 5px;">

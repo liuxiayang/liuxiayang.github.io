@@ -1,20 +1,12 @@
-> Ported Theme of [Hux Blog](https://github.com/Huxpro/huxpro.github.io), Thank [Huxpro](https://github.com/Huxpro) for designing such a flawless theme.
->
-> This HuWeihuang theme created by [HuWeihuang](http://www.huweihuang.com/) modified from the original Porter [YuHsuan](https://github.com/YenYuHsuan/hexo-theme-beantech).
+> This theme created by [Liumo](http://www.huweihuang.com/) modified from the original Porter [HuWeihuang]](http://www.huweihuang.com/).
 > 
-> This theme has been published to the [hexo theme list](https://hexo.io/themes/).
+# > This theme has been published to the [hexo theme list](https://hexo.io/themes/).
 
 # Live Demo
 
-Hu Weihuang Blog : [www.huweihuang.com](http://www.huweihuang.com/)
+Liumo Blog : [www.liuxiayan.github.io](http://www.liuxiayan.github.io/)
 
-![Theme_HuWeihuang](https://res.cloudinary.com/dqxtn0ick/image/upload/v1553666111/blog/blog.jpg)
-
-# Copyright Notice
-
-**You can free to use this theme, but you need to keep the following copyright notice on the website.**
-
-<img src="https://res.cloudinary.com/dqxtn0ick/image/upload/v1537879475/header/copyright.png" width="55%">
+# ![Theme_HuWeihuang](https://res.cloudinary.com/dqxtn0ick/image/upload/v1553666111/blog/blog.jpg)
 
 # Install Hexo
 

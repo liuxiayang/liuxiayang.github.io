@@ -15,11 +15,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          Continue to learn English - 刘夏阳 | Blog
+          后端笔记 - 刘夏阳 | Blog
         
     </title>
 
-    <link rel="canonical" href="http://yoursite.com/liuxiayang.github.io/in-article/Learning-English/">
+    <link rel="canonical" href="http://yoursite.com/liuxiayang.github.io/in-article/后端笔记/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -90,11 +90,11 @@
                         <div class="tags">
                             
                         </div>
-                        <h1>Continue to learn English</h1>
+                        <h1>后端笔记</h1>
                         <h2 class="subheading"></h2>
                         <span class="meta">
                             Posted by 刘夏阳 on
-                            2019-05-14
+                            2019-06-27
                         </span>
                     </div>
                 
@@ -216,22 +216,27 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <p>save your breath<br>
-break one’s back</p>
-<p>make no mistake<br>
-Make no mistake, this is the biggest challenge we have faced so far.</p>
-<p>In the absence of sufficient proof, the police could not indict him.</p>
-<p>be walking on air 形容：感到特别开心<br>
-I won the lottery today, and now I am walking on air.</p>
-<p>The little boy held a cluster of flowers in his hand, looking wryly amused.<br>
-The fans clustered around the hotel entrance waiting for the singer.<br>
-The sheep for sale huddled together in a sheepfold.</p>
-<h3 id="fiction和novel">fiction和novel</h3>
-<p>都是小说, novel这个词很老，在现在一般使用上，大家倾向于只把它用在长篇严肃文学上。<br>
-而那些比较时髦的畅销小说之类会用 fiction。<br>
-通俗小说，如科幻，言情，惊恐，犯罪之类，不管多厚，一般叫做fiction而不用novel。</p>
-<p>fiction: [U] books and stories about imaginary people and events.<br>
-novel:[C]a long written story in which the characters and events are usually imaginary.</p>
+                <h3 id="node">Node</h3>
+<p>作用域 1.全局作用域：如果一个变量没有用 var、let 或者 const 之类的关键字修饰，那么它就是属于全局作用域，定义在全局作用域上的变量可以通过 global 对象访问到。</p>
+<pre><code> a = 10
+ console.log(global.a) // 10
+</code></pre>
+<p>变量 a 位于全局作用域中，即使在不同文件也能访问到变量 a。</p>
+<p>2.模块作用域：在代码文件顶层（不在任何方法对象中）使用 var、let 或者 const 修饰的变量都位于模块作用域中，不同模块作用域是隔离的。<br>
+模块作用域中的 this 指向 module.exports 中</p>
+<pre><code>this.a = 10
+console.log(module.exports) // 10
+</code></pre>
+<p>3.函数作用域 4.块级作用域</p>
+<p>Buffer<br>
+不显示声明默认 buffer 格式<br>
+Buffer.from()<br>
+Buffer.toString([encoding = ‘utf-8’],[start],[end])</p>
+<h3 id="python">Python</h3>
+<pre><code>11 / 4    # ==&gt; 2
+11.0 / 4    # ==&gt; 2.75
+</code></pre>
+<h3 id="c">C</h3>
 
 
                 <hr>
@@ -239,12 +244,12 @@ novel:[C]a long written story in which the characters and events are usually ima
                 <ul class="pager">
                     
                         <li class="previous">
-                            <a href="/in-article/影评/" data-toggle="tooltip" data-placement="top" title="影评">&larr; Previous Post</a>
+                            <a href="/in-article/一些句子/" data-toggle="tooltip" data-placement="top" title="一些句子">&larr; Previous Post</a>
                         </li>
                     
                     
                         <li class="next">
-                            <a href="/in-article/CSS学习笔记/" data-toggle="tooltip" data-placement="top" title="CSS学习笔记">Next Post &rarr;</a>
+                            <a href="/in-article/JS学习笔记/" data-toggle="tooltip" data-placement="top" title="JS学习笔记">Next Post &rarr;</a>
                         </li>
                     
                 </ul>
@@ -301,7 +306,7 @@ novel:[C]a long written story in which the characters and events are usually ima
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#fiction和novel"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">fiction&#x548C;novel</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#node"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">Node</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#python"><span class="toc-nav-number">2.</span> <span class="toc-nav-text">Python</span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#c"><span class="toc-nav-number">3.</span> <span class="toc-nav-text">C</span></a></li></ol>
         
         </div>
       </aside>

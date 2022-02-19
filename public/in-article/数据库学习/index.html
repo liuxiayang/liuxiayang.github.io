@@ -15,11 +15,11 @@
     <script async defer src="https://buttons.github.io/buttons.js"></script>
     <title>
         
-          Continue to learn English - 刘夏阳 | Blog
+          数据库学习 - 刘夏阳 | Blog
         
     </title>
 
-    <link rel="canonical" href="http://yoursite.com/liuxiayang.github.io/in-article/Learning-English/">
+    <link rel="canonical" href="http://yoursite.com/liuxiayang.github.io/in-article/数据库学习/">
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="/css/bootstrap.min.css">
@@ -72,7 +72,7 @@
 <style type="text/css">
     header.intro-header{
         
-            background-image: url('https://github.com/liuxiayang/pic/blob/master/wallpaper/beach.jpg?raw=true')
+            background-image: url('https://github.com/liuxiayang/pic/blob/master/wallpaper/dusk-flower.jpg?raw=true')
             /*post*/
         
     }
@@ -90,11 +90,11 @@
                         <div class="tags">
                             
                         </div>
-                        <h1>Continue to learn English</h1>
+                        <h1>数据库学习</h1>
                         <h2 class="subheading"></h2>
                         <span class="meta">
                             Posted by 刘夏阳 on
-                            2019-05-14
+                            2021-10-02
                         </span>
                     </div>
                 
@@ -216,35 +216,94 @@
                 col-md-10 col-md-offset-1
                 post-container">
 
-                <p>save your breath<br>
-break one’s back</p>
-<p>make no mistake<br>
-Make no mistake, this is the biggest challenge we have faced so far.</p>
-<p>In the absence of sufficient proof, the police could not indict him.</p>
-<p>be walking on air 形容：感到特别开心<br>
-I won the lottery today, and now I am walking on air.</p>
-<p>The little boy held a cluster of flowers in his hand, looking wryly amused.<br>
-The fans clustered around the hotel entrance waiting for the singer.<br>
-The sheep for sale huddled together in a sheepfold.</p>
-<h3 id="fiction和novel">fiction和novel</h3>
-<p>都是小说, novel这个词很老，在现在一般使用上，大家倾向于只把它用在长篇严肃文学上。<br>
-而那些比较时髦的畅销小说之类会用 fiction。<br>
-通俗小说，如科幻，言情，惊恐，犯罪之类，不管多厚，一般叫做fiction而不用novel。</p>
-<p>fiction: [U] books and stories about imaginary people and events.<br>
-novel:[C]a long written story in which the characters and events are usually imaginary.</p>
+                <h3><span id="基本命令">基本命令</span></h3>
+<p>1.登陆/退出<br>
+mysql -u root -p<br>
+exit;</p>
+<p>2.查询服务器中所有数据库<br>
+show databases;<br>
+±-------------------+<br>
+| Database |<br>
+±-------------------+<br>
+| information_schema |<br>
+| mysql |<br>
+| performance_schema |<br>
+| sys |<br>
+| test |<br>
+±-------------------+<br>
+5 rows in set (0.01 sec)</p>
+<p>3.创建数据库<br>
+creact database test;</p>
+<p>4.查看此数据库中数据表<br>
+show tables</p>
+<p>5.创建数据表<br>
+CREATE TABLE pet (<br>
+-&gt; name VARCHAR(20)<br>
+-&gt; …<br>
+…<br>
+);</p>
+<p>6.数据库基本操作<br>
+INSET INTO pet VALUES(A,B,…);<br>
+UPDATE pet set name = ‘xxx’ where owner = ''bbb;<br>
+DELETE from pet where name = ‘xxx’;<br>
+SELECT * from pet;</p>
+<ol start="7">
+<li></li>
+</ol>
+<p>– 主键约束：不可重复，不可为空<br>
+creat table user(<br>
+id int primary key,<br>
+name varchart(20),<br>
+password varchart(20),<br>
+)<br>
+creat table userX(<br>
+id int,<br>
+name varchart(20),<br>
+password varchart(20),<br>
+primary key(id,name) // 表示满足同时不重复，就ok<br>
+)</p>
+<p>添加主键<br>
+alter table userX add primary key(id)；<br>
+alter table userX modify id int primary key；<br>
+删除主键<br>
+alter table userX drop primary key(id)；</p>
+<p>– 自增约束<br>
+creat table userX(<br>
+id int primary key auto_increment,<br>
+name varchart(20),<br>
+password varchart(20),<br>
+)</p>
+<p>– 唯一约束：修饰的字段不可重复<br>
+creat table userX(<br>
+id int,<br>
+name varchart(20),<br>
+password varchart(20),<br>
+unique(name)<br>
+)</p>
+<p>– 非空约束<br>
+creat table userX(<br>
+id int,<br>
+name varchart(20) not null,<br>
+password varchart(20),<br>
+)</p>
+<p>– 默认约束<br>
+creat table userX(<br>
+id int,<br>
+name varchart(20) default ‘user’,<br>
+password varchart(20),<br>
+)</p>
+<p>– 外键约束<br>
+1.主表中没有的数据值，子表中不可以使用<br>
+2.主表中的数据被副表引用后，在主表中不可删除</p>
 
 
                 <hr>
                 <!-- Pager -->
                 <ul class="pager">
                     
-                        <li class="previous">
-                            <a href="/in-article/影评/" data-toggle="tooltip" data-placement="top" title="影评">&larr; Previous Post</a>
-                        </li>
-                    
                     
                         <li class="next">
-                            <a href="/in-article/CSS学习笔记/" data-toggle="tooltip" data-placement="top" title="CSS学习笔记">Next Post &rarr;</a>
+                            <a href="/in-article/有趣的知识来者不拒/" data-toggle="tooltip" data-placement="top" title="有趣的知识来者不拒">Next Post &rarr;</a>
                         </li>
                     
                 </ul>
@@ -301,7 +360,7 @@ novel:[C]a long written story in which the characters and events are usually ima
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#fiction和novel"><span class="toc-nav-number">1.</span> <span class="toc-nav-text">fiction&#x548C;novel</span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.</span> <span class="toc-nav-text"><span id="&#x57FA;&#x672C;&#x547D;&#x4EE4;">&#x57FA;&#x672C;&#x547D;&#x4EE4;</span></span></a></li></ol>
         
         </div>
       </aside>

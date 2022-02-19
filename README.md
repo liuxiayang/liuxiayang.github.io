@@ -1,6 +1,6 @@
 > This theme created by [Liumo](http://www.huweihuang.com/) modified from the original Porter [HuWeihuang]](http://www.huweihuang.com/).
-> 
-# > This theme has been published to the [hexo theme list](https://hexo.io/themes/).
+
+[//]: # （This theme has been published to the [hexo theme list](https://hexo.io/themes/).）
 
 # Live Demo
 

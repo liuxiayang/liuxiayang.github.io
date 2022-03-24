@@ -6,8 +6,6 @@
 
 Liumo Blog : [www.liuxiayan.github.io](http://www.liuxiayan.github.io/)
 
-# ![Theme_HuWeihuang](https://res.cloudinary.com/dqxtn0ick/image/upload/v1553666111/blog/blog.jpg)
-
 # Install Hexo
 
 Install Node.js  and Git

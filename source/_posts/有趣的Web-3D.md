@@ -16,6 +16,8 @@ tags:
 
 WebGL是在浏览器中实现三维效果的一套规范。
 
+更新：**WebGpu**已经孕育而出，相信两年之后（2024年）随着此项技术的成熟，可慢慢取代WebGL，前端的触手将伸向更远的地方。
+
 #### THREE.JS
 &emsp;&emsp;&nbsp;&nbsp;虽说通过WebGL的绘制效果甚至可能达到本地的高性能游戏专用机的绘制效果，但WebGL直接对gpu进行操作，如果没有非常精通OpenGL的人在还是不太现实的。因此，为了能够更加简单的利用WebGL，库「Three.js」被发表了。因为 Three.js 非常好用，所以很快变得非常有人气。WebGL的javascript框架除了Three.js之外，还有「J3D」和「SceneJS」和日本开发的「gl.enchant.js」等。
 

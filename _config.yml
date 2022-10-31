@@ -11,7 +11,7 @@ timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com/liuxiayang.github.io      # Note: don't forget to modify the CNAME file to your url
+url: http://liuxiayang/liuxiayang.github.io      # Note: don't forget to modify the CNAME file to your url
 root: /
 #permalink: :year/:month/:day/:title/
 permalink: :category/:title/
@@ -233,7 +233,7 @@ sitemap:
 # branch: master
 deploy:
   type: git
-  repository: https://github.com/liuxiayang/liuxiayang.github.io
+  repository: https://github.com/liuxiayang/liuxiayang.github.io.git
   branch: master
 
 #live2d

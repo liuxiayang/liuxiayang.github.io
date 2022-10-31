@@ -42,7 +42,7 @@ useReducer 改变状态
 思路就是这么简单，理解了这两个 Hooks Api 后，多写几遍就熟悉了。
 
 ===
-代码
+demo
 ===
 
 最近重构项目又用Redux搞了一套，发现immer真好用！

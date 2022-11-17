@@ -37,13 +37,6 @@
     </url>
 
     <url>
-        <loc>http://liuxiayang/liuxiayang.github.io/tags/Skill/</loc>
-        <lastmod>2022-09-07T09:30:18.248Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.2</priority>
-    </url>
-
-    <url>
         <loc>http://liuxiayang/liuxiayang.github.io/tags/React/</loc>
         <lastmod>2022-09-07T09:30:18.248Z</lastmod>
         <changefreq>weekly</changefreq>
@@ -67,6 +60,13 @@
     <url>
         <loc>http://liuxiayang/liuxiayang.github.io/tags/Notes/</loc>
         <lastmod>2022-09-07T09:38:19.562Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.2</priority>
+    </url>
+
+    <url>
+        <loc>http://liuxiayang/liuxiayang.github.io/tags/Skill/</loc>
+        <lastmod>2022-11-09T16:47:25.976Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.2</priority>
     </url>

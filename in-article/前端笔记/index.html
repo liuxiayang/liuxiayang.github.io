@@ -141,14 +141,14 @@
 
                         
                         <li>
-                            <a href="/about/">Me</a>
+                            <a href="/archive/">Archives</a>
                         </li>
                         
                     
 
                         
                         <li>
-                            <a href="/archive/">Archives</a>
+                            <a href="/about/">Me</a>
                         </li>
                         
                     
@@ -235,12 +235,12 @@ href（hyperReference）：既超文本引用：当浏览器遇到 href 时，�
 <p>并行加载，串行解析</p>
 <p>伪元素/伪类：一个是 dom 中存在的元素（before），一个是附加在元素上才能实现的的类（hover）</p>
 <p>BFC/IFC<br>
-Block Formatting Context 即块级格式上下文，简单的说，BFC 是页面上的一个隔离的独立容器，不受外界干扰或干扰外界。</p>
-<pre><code>float不为 none
-overflow的值不为 visible
-position 为 absolute 或 fixed
-display的值为 inline-block 或 table-cell 或 table-caption 或 grid
-</code></pre>
+Block Formatting Context 即块级格式上下文，简单的说，BFC 是页面上的一个隔离的独立容器，不受外界干扰或干扰外界。<br>
+条件：<br>
+float不为 none<br>
+overflow的值不为 visible<br>
+position 为 absolute 或 fixed<br>
+display的值为 inline-block 或 table-cell 或 table-caption 或 grid</p>
 <h4><span id="常见布局">常见布局</span></h4>
 <p>两列自适应布局<br>
 1.float+overflow:hidden/position<br>
@@ -250,7 +250,8 @@ display的值为 inline-block 或 table-cell 或 table-caption 或 grid
 由于设置 overflow:hidden 并不会触发 IE6-浏览器的 haslayout 属性，所以需要设置 zoom:1 来兼容 IE6-浏览器。<br>
 2.flex<br>
 3.grid</p>
-<p>圣杯布局/双飞翼布局 1.左右 float，中间 margin-left/margin-right,父元素清除浮动/position<br>
+<p>圣杯布局/双飞翼布局<br>
+1.左右 float，中间 margin-left/margin-right,父元素清除浮动/position<br>
 2.margin<br>
 .left{<br>
 width: 200px;<br>
@@ -268,7 +269,7 @@ margin-left: -200px;<br>
 4.grid(二维)</p>
 <p>(flex:1 真好用)</p>
 <h3><span id="js">Js</span></h3>
-<h4><span id="原理">原理</span></h4>
+<h4><span id="基础">基础</span></h4>
 <p><strong>解释阶段：</strong><br>
 词法/语法分析:<br>
 外部环境的引用（outer Lexical Environment）：指它可以访问其父级词法环境（即作用域）。<br>
@@ -320,6 +321,11 @@ var add = currying(function(){
     return sum;
 });
 alert( add(10)(20)(50) )        // 80
+</code></pre>
+<h4><span id="event-loop">EVENT LOOP</span></h4>
+<pre><code>tasks
+microtasks
+浏览器渲染
 </code></pre>
 <h4><span id="api">API</span></h4>
 <p>Array.prototype.flat() 递归平铺数组<br>
@@ -505,7 +511,7 @@ GUI 渲染线程与 JavaScript 引擎线程互斥。</p>
 <p>删除本地分支： git branch -d dev20181018<br>
 如果删除不了可以强制删除，git branch -D dev20181018<br>
 删除远程分支：git push origin --delete dev20181018<br>
-git fetch -p origin 清楚本地缓存，用于远程分支已删除，本地显示还存在<br>
+git fetch -p origin 清除本地缓存，用于远程分支已删除，本地显示还存在<br>
 使用命令 git remote show origin，可以查看 remote 地址，远程分支，还有本地分支与之相对应关系等信息。</p>
 <p>远程分支覆盖本地<br>
 git fetch --all<br>
@@ -541,8 +547,6 @@ npm install</p>
 <p>1.不主动引入组件，编辑器自动引入 2.快速生成模板 rcc + tab （<a href="https://blog.csdn.net/weixin_43606158/article/details90900061%EF%BC%89" target="_blank" rel="noopener">https://blog.csdn.net/weixin_43606158/article/details90900061）</a><br>
 3.Mac 为何 F*系列组合快捷键无效？ Fn + F6 + shift = 重命名</p>
 <h3><span id="业务经验">业务经验</span></h3>
-<p>1.Select 组件<br>
-onChange={(value, option) =&gt; {}} // 可传入选项的 id 与 name</p>
 <h3><span id="learn">Learn</span></h3>
 <p>数据结构与算法 Javascript 描述<br>
 js 语言精粹<br>
@@ -663,7 +667,7 @@ ETag/If-Not-Match(精确判断资源是否被修改)、Last-Modified/If-Modified
         <div id="toc" class="toc-article">
         <strong class="toc-title">Contents</strong>
         
-          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.</span> <span class="toc-nav-text"><span id="htmlcss">Html/Css</span></span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text"><span id="&#x5E38;&#x89C1;&#x5E03;&#x5C40;">&#x5E38;&#x89C1;&#x5E03;&#x5C40;</span></span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">2.</span> <span class="toc-nav-text"><span id="js">Js</span></span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text"><span id="&#x539F;&#x7406;">&#x539F;&#x7406;</span></span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text"><span id="api">API</span></span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">3.</span> <span class="toc-nav-text"><span id="react">React</span></span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text"><span id="react-hooks">React Hooks</span></span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text"><span id="react-fiber">React Fiber</span></span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text"><span id="diff-&#x7B97;&#x6CD5;">Diff &#x7B97;&#x6CD5;</span></span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">4.</span> <span class="toc-nav-text"><span id="vueng">Vue/Ng</span></span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">5.</span> <span class="toc-nav-text"><span id="flutter">Flutter</span></span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">6.</span> <span class="toc-nav-text"><span id="&#x524D;&#x7AEF;&#x5DE5;&#x7A0B;&#x5316;">&#x524D;&#x7AEF;&#x5DE5;&#x7A0B;&#x5316;</span></span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">7.</span> <span class="toc-nav-text"><span id="&#x8BA1;&#x7B97;&#x673A;&#x57FA;&#x7840;">&#x8BA1;&#x7B97;&#x673A;&#x57FA;&#x7840;</span></span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">8.</span> <span class="toc-nav-text"><span id="&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;-&#x6570;&#x636E;&#x7ED3;&#x6784;-&#x7B97;&#x6CD5;">&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;&#x3001;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x3001;&#x7B97;&#x6CD5;</span></span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">8.1.</span> <span class="toc-nav-text"><span id="&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;">&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;</span></span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">8.2.</span> <span class="toc-nav-text"><span id="&#x7B97;&#x6CD5;">&#x7B97;&#x6CD5;</span></span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">9.</span> <span class="toc-nav-text"><span id="&#x6D4F;&#x89C8;&#x5668;">&#x6D4F;&#x89C8;&#x5668;</span></span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">9.1.</span> <span class="toc-nav-text"><span id="&#x9875;&#x9762;&#x52A0;&#x8F7D;&#x4F18;&#x5316;">&#x9875;&#x9762;&#x52A0;&#x8F7D;&#x4F18;&#x5316;</span></span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">9.2.</span> <span class="toc-nav-text"><span id="api">API</span></span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">9.3.</span> <span class="toc-nav-text"><span id="&#x64CD;&#x4F5C;">&#x64CD;&#x4F5C;</span></span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">9.4.</span> <span class="toc-nav-text"><span id="&#x539F;&#x7406;">&#x539F;&#x7406;</span></span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">10.</span> <span class="toc-nav-text"><span id="git">Git</span></span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">11.</span> <span class="toc-nav-text"><span id="npm">npm</span></span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">11.1.</span> <span class="toc-nav-text"><span id="&#x5E38;&#x7528;&#x547D;&#x4EE4;">&#x5E38;&#x7528;&#x547D;&#x4EE4;</span></span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">11.2.</span> <span class="toc-nav-text"><span id="npm-&#x5305;">npm &#x5305;</span></span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">12.</span> <span class="toc-nav-text"><span id="&#x63D0;&#x9AD8;&#x6548;&#x7387;">&#x63D0;&#x9AD8;&#x6548;&#x7387;</span></span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">13.</span> <span class="toc-nav-text"><span id="&#x4E1A;&#x52A1;&#x7ECF;&#x9A8C;">&#x4E1A;&#x52A1;&#x7ECF;&#x9A8C;</span></span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">14.</span> <span class="toc-nav-text"><span id="learn">Learn</span></span></a></li></ol>
+          <ol class="toc-nav"><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.</span> <span class="toc-nav-text"><span id="htmlcss">Html/Css</span></span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">1.1.</span> <span class="toc-nav-text"><span id="&#x5E38;&#x89C1;&#x5E03;&#x5C40;">&#x5E38;&#x89C1;&#x5E03;&#x5C40;</span></span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">2.</span> <span class="toc-nav-text"><span id="js">Js</span></span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">2.1.</span> <span class="toc-nav-text"><span id="&#x57FA;&#x7840;">&#x57FA;&#x7840;</span></span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">2.2.</span> <span class="toc-nav-text"><span id="event-loop">EVENT LOOP</span></span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">2.3.</span> <span class="toc-nav-text"><span id="api">API</span></span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">3.</span> <span class="toc-nav-text"><span id="react">React</span></span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">3.1.</span> <span class="toc-nav-text"><span id="react-hooks">React Hooks</span></span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">3.2.</span> <span class="toc-nav-text"><span id="react-fiber">React Fiber</span></span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">3.3.</span> <span class="toc-nav-text"><span id="diff-&#x7B97;&#x6CD5;">Diff &#x7B97;&#x6CD5;</span></span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">4.</span> <span class="toc-nav-text"><span id="vueng">Vue/Ng</span></span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">5.</span> <span class="toc-nav-text"><span id="flutter">Flutter</span></span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">6.</span> <span class="toc-nav-text"><span id="&#x524D;&#x7AEF;&#x5DE5;&#x7A0B;&#x5316;">&#x524D;&#x7AEF;&#x5DE5;&#x7A0B;&#x5316;</span></span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">7.</span> <span class="toc-nav-text"><span id="&#x8BA1;&#x7B97;&#x673A;&#x57FA;&#x7840;">&#x8BA1;&#x7B97;&#x673A;&#x57FA;&#x7840;</span></span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">8.</span> <span class="toc-nav-text"><span id="&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;-&#x6570;&#x636E;&#x7ED3;&#x6784;-&#x7B97;&#x6CD5;">&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;&#x3001;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x3001;&#x7B97;&#x6CD5;</span></span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">8.1.</span> <span class="toc-nav-text"><span id="&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;">&#x8BBE;&#x8BA1;&#x6A21;&#x5F0F;</span></span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">8.2.</span> <span class="toc-nav-text"><span id="&#x7B97;&#x6CD5;">&#x7B97;&#x6CD5;</span></span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">9.</span> <span class="toc-nav-text"><span id="&#x6D4F;&#x89C8;&#x5668;">&#x6D4F;&#x89C8;&#x5668;</span></span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">9.1.</span> <span class="toc-nav-text"><span id="&#x9875;&#x9762;&#x52A0;&#x8F7D;&#x4F18;&#x5316;">&#x9875;&#x9762;&#x52A0;&#x8F7D;&#x4F18;&#x5316;</span></span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">9.2.</span> <span class="toc-nav-text"><span id="api">API</span></span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">9.3.</span> <span class="toc-nav-text"><span id="&#x64CD;&#x4F5C;">&#x64CD;&#x4F5C;</span></span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">9.4.</span> <span class="toc-nav-text"><span id="&#x539F;&#x7406;">&#x539F;&#x7406;</span></span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">10.</span> <span class="toc-nav-text"><span id="git">Git</span></span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">11.</span> <span class="toc-nav-text"><span id="npm">npm</span></span></a><ol class="toc-nav-child"><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">11.1.</span> <span class="toc-nav-text"><span id="&#x5E38;&#x7528;&#x547D;&#x4EE4;">&#x5E38;&#x7528;&#x547D;&#x4EE4;</span></span></a></li><li class="toc-nav-item toc-nav-level-4"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">11.2.</span> <span class="toc-nav-text"><span id="npm-&#x5305;">npm &#x5305;</span></span></a></li></ol></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">12.</span> <span class="toc-nav-text"><span id="&#x63D0;&#x9AD8;&#x6548;&#x7387;">&#x63D0;&#x9AD8;&#x6548;&#x7387;</span></span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">13.</span> <span class="toc-nav-text"><span id="&#x4E1A;&#x52A1;&#x7ECF;&#x9A8C;">&#x4E1A;&#x52A1;&#x7ECF;&#x9A8C;</span></span></a></li><li class="toc-nav-item toc-nav-level-3"><a class="toc-nav-link" href="#undefined"><span class="toc-nav-number">14.</span> <span class="toc-nav-text"><span id="learn">Learn</span></span></a></li></ol>
         
         </div>
       </aside>

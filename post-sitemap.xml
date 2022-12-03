@@ -8,7 +8,15 @@
 
     <url>
         <loc>http://liuxiayang/liuxiayang.github.io/%E6%9C%89%E6%84%9F%E8%80%8C%E5%8F%91/%E5%8A%A8%E6%BC%AB/</loc>
-        <lastmod>2022-12-02T17:30:16.681Z</lastmod>
+        <lastmod>2022-12-03T09:02:46.889Z</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.6</priority>
+
+    </url>
+
+    <url>
+        <loc>http://liuxiayang/liuxiayang.github.io/in-article/%E5%89%8D%E7%AB%AF%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%8E%9F%E7%90%86%E4%B8%8E%E5%BA%94%E7%94%A8/</loc>
+        <lastmod>2022-12-03T08:41:12.323Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
@@ -97,14 +105,6 @@
     <url>
         <loc>http://liuxiayang/liuxiayang.github.io/in-article/React-Hooks-%E5%85%A8%E5%B1%80%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86/</loc>
         <lastmod>2022-09-07T09:30:18.248Z</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>0.6</priority>
-
-    </url>
-
-    <url>
-        <loc>http://liuxiayang/liuxiayang.github.io/in-article/%E5%89%8D%E7%AB%AF%E5%BE%AE%E6%9C%8D%E5%8A%A1%E5%8E%9F%E7%90%86%E4%B8%8E%E5%BA%94%E7%94%A8/</loc>
-        <lastmod>2022-04-02T17:07:58.146Z</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.6</priority>
 
